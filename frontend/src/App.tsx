@@ -93,7 +93,7 @@ function App() {
 
   // Render form field
   const renderField = (field: any) => {
-    const { name, label, type, validation } = field;
+    const { name, label, type, validation, placeholder } = field;
     const value = formData[name] || '';
 
     if (type === 'select') {
@@ -106,7 +106,7 @@ function App() {
           className="form-input"
           required
         >
-          <option value="">Select {label}</option>
+          <option value="">{placeholder || `Select ${label}`}</option>
           <option value="proprietorship">Proprietorship</option>
           <option value="partnership">Partnership</option>
           <option value="llp">LLP</option>
@@ -123,7 +123,7 @@ function App() {
            name={name}
            value={value}
            onChange={(e) => handleFieldChange(name, e.target.value)}
-           placeholder={label}
+           placeholder={placeholder || label}
            className="form-input min-h-[100px] resize-none"
            required
          />
@@ -137,7 +137,7 @@ function App() {
         name={name}
         value={value}
         onChange={(e) => handleFieldChange(name, e.target.value)}
-        placeholder={label}
+        placeholder={placeholder || label}
         className="form-input"
         pattern={validation}
         required

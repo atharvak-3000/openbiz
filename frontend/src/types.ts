@@ -3,6 +3,7 @@ export interface FormField {
   label: string;
   type: string;
   validation: string;
+  placeholder?: string;
 }
 
 export interface FormSchema {

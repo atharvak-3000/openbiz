@@ -4,13 +4,15 @@
       "name": "aadhaarNumber",
       "label": "Aadhaar Number",
       "type": "text",
-      "validation": "^[0-9]{12}$"
+      "validation": "^[0-9]{12}$",
+      "placeholder": "Enter your 12-digit Aadhaar number"
     },
     {
       "name": "otp",
       "label": "OTP",
       "type": "text",
-      "validation": "^[0-9]{6}$"
+      "validation": "^[0-9]{6}$",
+      "placeholder": "Enter 6-digit OTP sent to your mobile"
     }
   ],
   "step2": [
@@ -18,43 +20,50 @@
       "name": "panNumber",
       "label": "PAN Number",
       "type": "text",
-      "validation": "^[A-Z]{5}[0-9]{4}[A-Z]{1}$"
+      "validation": "^[A-Z]{5}[0-9]{4}[A-Z]{1}$",
+      "placeholder": "Enter your PAN number (e.g., ABCDE1234F)"
     },
     {
       "name": "businessName",
       "label": "Business Name",
       "type": "text",
-      "validation": "^[a-zA-Z0-9\\s]{2,50}$"
+      "validation": "^[a-zA-Z0-9\\s]{2,50}$",
+      "placeholder": "Enter your business/company name"
     },
     {
       "name": "businessType",
       "label": "Business Type",
       "type": "select",
-      "validation": ""
+      "validation": "",
+      "placeholder": "Select your business type"
     },
     {
       "name": "mobileNumber",
       "label": "Mobile Number",
       "type": "text",
-      "validation": "^[0-9]{10}$"
+      "validation": "^[0-9]{10}$",
+      "placeholder": "Enter your 10-digit mobile number"
     },
     {
       "name": "email",
       "label": "Email Address",
       "type": "email",
-      "validation": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+      "validation": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+      "placeholder": "Enter your email address"
     },
     {
       "name": "address",
       "label": "Business Address",
       "type": "textarea",
-      "validation": "^[a-zA-Z0-9\\s,.-]{10,200}$"
+      "validation": "^[a-zA-Z0-9\\s,.-]{10,200}$",
+      "placeholder": "Enter your complete business address"
     },
     {
       "name": "pincode",
       "label": "Pincode",
       "type": "text",
-      "validation": "^[0-9]{6}$"
+      "validation": "^[0-9]{6}$",
+      "placeholder": "Enter your 6-digit pincode"
     }
   ]
 }
