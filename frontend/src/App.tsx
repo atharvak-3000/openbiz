@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FormSchema, FormData, ValidationError } from './types';
 
-const BACKEND_URL = process.env.NODE_ENV === 'production' 
+const BACKEND_URL = import.meta.env.PROD 
   ? 'https://openbiz-backend-production.up.railway.app'
   : 'http://localhost:3001';
 
@@ -116,20 +116,19 @@ function App() {
       );
     }
 
-    if (type === 'textarea') {
-      return (
-        <textarea
-          key={name}
-          name={name}
-          value={value}
-          onChange={(e) => handleFieldChange(name, e.target.value)}
-          placeholder={label}
-          className="form-input min-h-[100px] resize-none"
-          pattern={validation}
-          required
-        />
-      );
-    }
+         if (type === 'textarea') {
+       return (
+         <textarea
+           key={name}
+           name={name}
+           value={value}
+           onChange={(e) => handleFieldChange(name, e.target.value)}
+           placeholder={label}
+           className="form-input min-h-[100px] resize-none"
+           required
+         />
+       );
+     }
 
     return (
       <input
