@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FormSchema, FormData, ValidationError } from './types';
 
-const BACKEND_URL = import.meta.env.PROD 
+const BACKEND_URL = import.meta.env.MODE === 'production'
   ? 'https://openbiz-backend-production.up.railway.app'
   : 'http://localhost:3001';
 
