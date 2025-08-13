@@ -11,6 +11,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Serve static files from the React app build
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+// Handle React routing, return all requests to React app
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
+});
+
 // Load form schema
 function loadFormSchema() {
   try {
@@ -112,12 +120,12 @@ function validateField(value, validation) {
   }
 }
 
-// Routes
-app.get('/health', (req, res) => {
+// API Routes
+app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'Backend is running' });
 });
 
-app.get('/schema', (req, res) => {
+app.get('/api/schema', (req, res) => {
   try {
     const schema = loadFormSchema();
     res.json(schema);
@@ -126,7 +134,7 @@ app.get('/schema', (req, res) => {
   }
 });
 
-app.post('/submit', (req, res) => {
+app.post('/api/submit', (req, res) => {
   try {
     const formData = req.body;
     const schema = loadFormSchema();

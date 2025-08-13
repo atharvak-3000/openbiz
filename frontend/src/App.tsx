@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { FormSchema, FormData, ValidationError } from './types';
 
 const BACKEND_URL = import.meta.env.MODE === 'production'
-  ? 'https://openbiz-backend-production.up.railway.app'
+  ? ''  // Use relative URLs in production (same domain)
   : 'http://localhost:3001';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
     const loadSchema = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`${BACKEND_URL}/schema`);
+        const response = await fetch(`${BACKEND_URL}/api/schema`);
         if (!response.ok) {
           throw new Error('Failed to load form schema');
         }
@@ -65,7 +65,7 @@ function App() {
       setError(null);
       setSuccess(null);
 
-      const response = await fetch(`${BACKEND_URL}/submit`, {
+             const response = await fetch(`${BACKEND_URL}/api/submit`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
