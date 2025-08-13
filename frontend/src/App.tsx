@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { FormSchema, FormData, ValidationError } from './types';
 
-const BACKEND_URL = 'http://localhost:3001';
+const BACKEND_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://openbiz-backend-production.up.railway.app'
+  : 'http://localhost:3001';
 
 function App() {
   const [schema, setSchema] = useState<FormSchema | null>(null);
