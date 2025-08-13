@@ -1,36 +1,60 @@
 {
   "step1": [
     {
-      "name": "ctl00$ContentPlaceHolder1$btnValidateAadhaar",
+      "name": "aadhaarNumber",
       "label": "Aadhaar Number",
-      "type": "submit",
+      "type": "text",
       "validation": "^[0-9]{12}$"
+    },
+    {
+      "name": "otp",
+      "label": "OTP",
+      "type": "text",
+      "validation": "^[0-9]{6}$"
     }
   ],
   "step2": [
     {
-      "name": "ctl00$ContentPlaceHolder1$txtadharno",
-      "label": "1. Aadhaar Number/ आधार संख्या",
+      "name": "panNumber",
+      "label": "PAN Number",
       "type": "text",
-      "validation": ""
+      "validation": "^[A-Z]{5}[0-9]{4}[A-Z]{1}$"
     },
     {
-      "name": "ctl00$ContentPlaceHolder1$txtownername",
-      "label": "2. Name of Entrepreneur / उद्यमी का नाम",
+      "name": "businessName",
+      "label": "Business Name",
       "type": "text",
+      "validation": "^[a-zA-Z0-9\\s]{2,50}$"
+    },
+    {
+      "name": "businessType",
+      "label": "Business Type",
+      "type": "select",
       "validation": ""
     },
     {
-      "name": "ctl00$ContentPlaceHolder1$chkDecarationA",
-      "label": "You must Agree Declerations.",
-      "type": "checkbox",
-      "validation": ""
+      "name": "mobileNumber",
+      "label": "Mobile Number",
+      "type": "text",
+      "validation": "^[0-9]{10}$"
     },
     {
-      "name": "ctl00$ContentPlaceHolder1$btnValidateAadhaar",
-      "label": "ctl00$ContentPlaceHolder1$btnValidateAadhaar",
-      "type": "submit",
-      "validation": ""
+      "name": "email",
+      "label": "Email Address",
+      "type": "email",
+      "validation": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+    },
+    {
+      "name": "address",
+      "label": "Business Address",
+      "type": "textarea",
+      "validation": "^[a-zA-Z0-9\\s,.-]{10,200}$"
+    },
+    {
+      "name": "pincode",
+      "label": "Pincode",
+      "type": "text",
+      "validation": "^[0-9]{6}$"
     }
   ]
 }
