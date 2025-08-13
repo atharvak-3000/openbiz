@@ -1,0 +1,17 @@
+{
+  "name": "openbiz-backend",
+  "version": "1.0.0",
+  "description": "Express backend for Openbiz form validation",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "keywords": ["express", "backend", "validation"],
+  "author": "Openbiz Assignment",
+  "license": "MIT"
+}

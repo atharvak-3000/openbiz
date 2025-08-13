@@ -1,0 +1,36 @@
+{
+  "step1": [
+    {
+      "name": "ctl00$ContentPlaceHolder1$btnValidateAadhaar",
+      "label": "Aadhaar Number",
+      "type": "submit",
+      "validation": "^[0-9]{12}$"
+    }
+  ],
+  "step2": [
+    {
+      "name": "ctl00$ContentPlaceHolder1$txtadharno",
+      "label": "1. Aadhaar Number/ आधार संख्या",
+      "type": "text",
+      "validation": ""
+    },
+    {
+      "name": "ctl00$ContentPlaceHolder1$txtownername",
+      "label": "2. Name of Entrepreneur / उद्यमी का नाम",
+      "type": "text",
+      "validation": ""
+    },
+    {
+      "name": "ctl00$ContentPlaceHolder1$chkDecarationA",
+      "label": "You must Agree Declerations.",
+      "type": "checkbox",
+      "validation": ""
+    },
+    {
+      "name": "ctl00$ContentPlaceHolder1$btnValidateAadhaar",
+      "label": "ctl00$ContentPlaceHolder1$btnValidateAadhaar",
+      "type": "submit",
+      "validation": ""
+    }
+  ]
+}
